@@ -9,7 +9,7 @@ import {
   Link,
 } from "react-router-dom";
 
-function App() {
+function TagScreen() {
   const [value, setValue] = useState("Type Here!");
 
   return (
@@ -74,6 +74,7 @@ function App() {
     </button>
   </div>
 </main>
+
       <header className="App-header">
         <p>
           GitHub Codespaces <span className="heart">♥️</span> React
@@ -86,4 +87,4 @@ function App() {
   );
 }
 
-export default App;
+export default TagScreen;
