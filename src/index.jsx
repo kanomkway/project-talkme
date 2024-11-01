@@ -4,12 +4,13 @@ import './index.css';
 import App from './App';
 import TagScreen from './TagScreen';
 import MainScreen from './MainScreen';
+import PageSelectedScreen from './PageSelectedScreen';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <TagScreen />
+    <PageSelectedScreen />
   </React.StrictMode>
 );
 

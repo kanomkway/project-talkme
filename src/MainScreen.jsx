@@ -22,6 +22,7 @@ function MainScreen() {
             className="search-input"
             type="text"
             value={value}
+            onFocus={() => setValue("")}
             onChange={(e) => setValue(e.target.value)}
             placeholder="ค้นหา"
           />
