@@ -21,6 +21,7 @@ function App() {
         <FaSearch onClick={()=>alert("TRY")} className='pointer' type='submit' value="Submit" style={{fontSize: 30, marginTop: 30}} />
         <button className='log-button pointer'> เข้าสู่ระบบ / Log In </button>
       </div>
+      <div className="box">a</div>
       <header className="App-header">
         <p>
           GitHub Codespaces <span className="heart">♥️</span> React
