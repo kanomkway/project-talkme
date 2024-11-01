@@ -6,16 +6,13 @@
   font-style: normal;
 }
 
-.pointer {cursor: pointer;}
+.pointer {
+  cursor: pointer;
+}
 
 .App {
   text-align: center;
   background-color: #FDD5B8;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
 
 .App-header {
@@ -26,10 +23,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 .heart {
@@ -47,10 +40,12 @@
   margin:auto;
   background-color: white;
   height: 100px;
+  padding: 0 30px;
 }
 
 .head-input {
   background-color: #887F7F;
+  color: white;
   border-radius: 15px;
   height: 40px;
   width: 500px;
@@ -60,15 +55,13 @@
 .log-button {
   font-family: 'Kanit', sans-serif;
   font-weight: 600;
-  font-style: normal;
   background-color: white;
   text-align: center;
   border-radius: 20px;
-  border-width: 3px;
+  border: 2px solid #887F7F;
   height: 40px;
   width: 150px;
   margin-left: auto;
-  margin-right: 20px;
 }
 
 .nav-bar {
