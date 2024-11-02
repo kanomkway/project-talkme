@@ -6,11 +6,12 @@ import TagScreen from './TagScreen';
 import MainScreen from './MainScreen';
 import PageSelectedScreen from './PageSelectedScreen';
 import reportWebVitals from './reportWebVitals';
+import ProfileScreen from './ProfileScreen'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <PageSelectedScreen />
+    <ProfileScreen />
   </React.StrictMode>
 );
 
