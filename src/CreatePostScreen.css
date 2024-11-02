@@ -1,0 +1,103 @@
+.create-new-container {
+    background-color: #FDD5B8;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+.header h2 {
+    color: #3E3939;
+    font-weight: bold;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons .cancel {
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.header-buttons .save {
+    color: #3E3939;
+    font-weight: bold;
+}
+
+.header-buttons .public {
+    color: #3E3939;
+    font-weight: bold;
+}
+
+.input-container {
+    background-color: #3E3939;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    color: #FFFFFF;
+    font-weight: bold;
+    width: 100px;
+}
+
+.input-field {
+    background-color: #807c7c;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.dropdown {
+    width: 100%;
+}
+
+.dropdown-select {
+    background-color: #807c7c;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.content-container {
+    margin-top: 20px;
+}
+
+.content-container label {
+    color: #3E3939;
+    font-weight: bold;
+}
+
+.content-field {
+    background-color: #807c7c;
+    color: #FFFFFF;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    resize: none;
+}
