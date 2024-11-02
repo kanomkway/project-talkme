@@ -13,6 +13,7 @@ import ProfileScreen from './ProfileScreen';
 import LoginScreen from './LoginScreen'
 import PageSelectedScreen from './PageSelectedScreen';
 import TagScreen from './TagScreen';
+import ProfileScreen from './ProfileScreen';
 
 function App() {
   return (
