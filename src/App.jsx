@@ -9,6 +9,8 @@ import {
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./nav/Navbar";
 import MainScreen from './MainScreen';
+import ProfileScreen from './ProfileScreen';
+import LoginScreen from './LoginScreen'
 import PageSelectedScreen from './PageSelectedScreen';
 import TagScreen from './TagScreen';
 import ProfileScreen from './ProfileScreen';
@@ -19,7 +21,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<MainScreen />} />
-        <Route path="/userinfo" element={<ProfileScreen/>}/>
+        <Route path="/profile" element={<ProfileScreen />} />
+        <Route path="/login" element={<LoginScreen />} />
         <Route path="/tags" element={<TagScreen />} />
       </Routes>
     </Router>
