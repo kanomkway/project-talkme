@@ -42,7 +42,7 @@ function TagScreen() {
       </nav>
 
       <main className="main-content">
-  <div className="tags-header">
+      <div className="tags-header">
     <h2>Tags</h2>
       <div className="search-tags">
         <input type="text" placeholder="ค้นหาชื่อแท็ก" />
