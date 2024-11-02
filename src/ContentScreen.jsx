@@ -1,4 +1,4 @@
-import './App.css';
+import './ContentScreen.css';
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import {
@@ -14,47 +14,34 @@ function ContentScreen() {
   const [value, setValue] = useState("Type Here!")
 
   return (
-    <div className="App">
-      <div className="head">
-        <img className="pointer" style={{ marginLeft: 30 }} align="left" src="src/logo.png" width={100} alt="logo" />
-        <div className="search-container">
-          <input
-            className="search-input"
-            type="text"
-            value={value}
-            onFocus={() => setValue("")}
-            onChange={(e) => setValue(e.target.value)}
-            placeholder="ค้นหา"
-          />
-          <FaSearch
-            onClick={() => alert("TRY")}
-            className="search-icon"
-          />
-        </div>
-        <button className="log-button pointer">เข้าสู่ระบบ / Log In</button>
-      </div>
-      <div className="content-box">
-        <div className="selected-text">
-            <p className='Typed-text'>ยังไม่เสร็จ</p>
-            <button className='Arrange-text'>Recently Board▼</button>
-        </div>        
-        <div className="selected-content-container">
-            <div className='selected-content'>
-              <h3>หัวข้อ</h3>
-              <p>เนื้อหา</p>
-            </div>
-            <div className='selected-like-button-container'>
-              <div className='selected-like-button'>
-                <button></button>
-                <p>like count</p>
-                <button></button>
-                <p>dislike count</p>
-              </div>
-              <div>user name</div>
-            </div>
-        </div>
+    <main className="main-content">
+    <div className="post-container">
+      <h3 className="post-title">บริการร้านเกมหน้ามอ</h3>
+      <p className="post-content">
+        สำหรับใครที่หาเพื่อนเล่นเกม...
+      </p>
+      <div className="post-footer">
+        <button className="like-button">👍 978</button>
+        <button className="share-button">เล็งหัวอิงหู</button>
       </div>
     </div>
+    <div className="comment-container">
+      <h4>Comment #1</h4>
+      <p className="comment-content">
+        +10000 พี่ๆที่ชวนเล่นนี่สย...
+      </p>
+      <div className="comment-footer">
+        <button className="like-button">👍 113</button>
+        <button className="dislike-button">👎</button>
+        <p>เกิดมาแฉ</p>
+      </div>
+    </div>
+    <div className="comment-input-container">
+      <label htmlFor="comment">Comment :</label>
+      <textarea id="comment" className="comment-input" placeholder="Write a comment..."></textarea>
+      <button className="send-button">SEND</button>
+    </div>
+  </main>
   );
 }
 
