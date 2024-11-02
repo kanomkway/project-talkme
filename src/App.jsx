@@ -15,7 +15,7 @@ import TagScreen from './TagScreen';
 function App() {
   return (
     <Router>
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<MainScreen />} />
         <Route path="/tags" element={<TagScreen />} />

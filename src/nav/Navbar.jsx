@@ -3,11 +3,13 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   FaUser,
   FaHashtag,
+  FaSearch
+} from "react-icons/fa";
+import {
   BsClipboard2PlusFill,
   BsFillClipboard2HeartFill,
   BsFillClipboard2PulseFill,
-  FaSearch
-} from "react-icons/fa";
+} from "react-icons/bs";
 import Swal from "sweetalert2";
 import './Navbar.css'
 
@@ -68,10 +70,22 @@ const Navbar = () => {
     return (
     <>
       <div className="head">
-        <img className='pointer' style={{marginLeft: 30}} align="left" src="src/nav/logo.png" width={100} alt="logo"></img>
-        <input className='head-input' type="text" value={value} onChange={(e)=>setValue(e.target.value)}></input>
-        <FaSearch onClick={()=>alert("TRY")} className='pointer' type='submit' value="Submit" style={{fontSize: 30, marginTop: 30}} />
-        <button className='log-button pointer'> เข้าสู่ระบบ / Log In </button>
+        <img className='pointer' style={{marginLeft: 30}} align="left" src="src/logo.png" width={100} alt="logo"></img>
+        <div className="search-container">
+          <input
+            className="search-input"
+            type="text"
+            value={value}
+            onFocus={() => setValue("")}
+            onChange={(e) => setValue(e.target.value)}
+            placeholder="ค้นหา"
+          />
+          <FaSearch
+            onClick={() => alert("TRY")}
+            className="search-icon"
+          />
+        </div>
+        <button className="log-button pointer">เข้าสู่ระบบ / Log In</button>
       </div>
 
       <nav className="navbar">
