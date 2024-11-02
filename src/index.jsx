@@ -5,12 +5,13 @@ import App from './App';
 import TagScreen from './TagScreen';
 import MainScreen from './MainScreen';
 import PageSelectedScreen from './PageSelectedScreen';
+import ContentScreen from './ContentScreen';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <PageSelectedScreen />
+    <ContentScreen />
   </React.StrictMode>
 );
 
