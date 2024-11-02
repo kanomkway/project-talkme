@@ -11,6 +11,7 @@ import Navbar from "./nav/Navbar";
 import MainScreen from './MainScreen';
 import PageSelectedScreen from './PageSelectedScreen';
 import TagScreen from './TagScreen';
+import ProfileScreen from './ProfileScreen';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<MainScreen />} />
+        <Route path="/userinfo" element={<ProfileScreen/>}/>
         <Route path="/tags" element={<TagScreen />} />
       </Routes>
     </Router>
