@@ -2,16 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import TagScreen from './TagScreen';
-import MainScreen from './MainScreen';
-import PageSelectedScreen from './PageSelectedScreen';
 import reportWebVitals from './reportWebVitals';
-import ProfileScreen from './ProfileScreen'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ProfileScreen />
+    <App />
   </React.StrictMode>
 );
 
