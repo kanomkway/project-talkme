@@ -70,7 +70,14 @@ const Navbar = () => {
     return (
     <>
       <div className="head">
-        <img className='pointer' style={{marginLeft: 30}} align="left" src="src/logo.png" width={100} alt="logo"></img>
+        <a href="/">
+        <img className='pointer' 
+        style={{marginLeft: 30}} 
+        align="left" 
+        src="src/logo.png" 
+        width={100} 
+        alt="logo"></img>
+        </a>
         <div className="search-container">
           <input
             className="search-input"
