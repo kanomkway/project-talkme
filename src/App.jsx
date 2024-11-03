@@ -13,6 +13,7 @@ import ProfileScreen from './ProfileScreen';
 import LoginScreen from './LoginScreen'
 import PageSelectedScreen from './PageSelectedScreen';
 import TagScreen from './TagScreen';
+import MyBoardScreen from './MyBoardScreen';
 
 function App() {
   return (
@@ -23,6 +24,15 @@ function App() {
         <Route path="/profile" element={<ProfileScreen />} />
         <Route path="/login" element={<LoginScreen />} />
         <Route path="/tags" element={<TagScreen />} />
+        <Route path="/my_board" element={<MyBoardScreen />} />
+
+
+        <Route path="/general-p" element={<PageSelectedScreen/>}/>
+        <Route path="/music-p" element={<PageSelectedScreen/>}/>
+        <Route path="/pet-p" element={<PageSelectedScreen/>}/>
+        <Route path="/food-p" element={<PageSelectedScreen/>}/>
+        <Route path="/travel-p" element={<PageSelectedScreen/>}/>
+
       </Routes>
     </Router>
   )
