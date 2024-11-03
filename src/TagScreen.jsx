@@ -14,48 +14,54 @@ function TagScreen() {
 
   return (
     <div className="App">
-      <main className="main-content">
-      <div className="tags-header">
-    <h2>Tags</h2>
-      <div className="search-tags">
-        <input type="text" placeholder="ค้นหาชื่อแท็ก" />
-        <FaSearch className="search-icon-small" />
-        <button className="sort-button">ก - ข ▼</button>
+      <div className="head">
+        <img className="pointer" style={{ marginLeft: 30 }} align="left" src="src/logo.png" width={100} alt="logo" />
+        <div className="search-container">
+          <input
+            className="search-input"
+            type="text"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            placeholder="ค้นหา"
+          />
+          <FaSearch
+            onClick={() => alert("TRY")}
+            className="search-icon"
+          />
+        </div>
+        <button className="log-button pointer">เข้าสู่ระบบ / Log In</button>
       </div>
-  </div>
 
-  <div className="tags">
-    <button className="tag active">
-      <div className="tag-icon">👥</div>
-      <div>ทั่วไป</div>
-    </button>
-    <button className="tag">
-      <div className="tag-icon">🧳</div>
-      <div>ท่องเที่ยว</div>
-    </button>
-    <button className="tag">
-      <div className="tag-icon">🎵</div>
-      <div>เพลง</div>
-    </button>
-    <button className="tag">
-      <div className="tag-icon">🐾</div>
-      <div>สัตว์เลี้ยง</div>
-    </button>
-    <button className="tag">
-      <div className="tag-icon">🍔</div>
-      <div>อาหาร</div>
-    </button>
-  </div>
-</main>
+      <main className="main-content">
+        <div className="tags-header">
+          <div className="profile-header"> 
+              <h2>Tag</h2>  
+          </div>
+          <div className="search-tags">
+            <input type="text" placeholder="ค้นหาชื่อแท็ก" />
+            <FaSearch className="search-icon-small" />
+            <button className="sort-button">ก - ฮ ▼</button>
+          </div>
+      </div>
 
-      <header className="App-header">
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-      </header>
+      <div className="tags">
+        <button className="tag active">
+          <div>ทั่วไป</div>
+        </button>
+        <button className="tag">
+          <div>ท่องเที่ยว</div>
+        </button>
+        <button className="tag">
+          <div>เพลง</div>
+        </button>
+        <button className="tag">
+          <div>สัตว์เลี้ยง</div>
+        </button>
+        <button className="tag">
+          <div>อาหาร</div>
+        </button>
+      </div>
+      </main>
     </div>
   );
 }

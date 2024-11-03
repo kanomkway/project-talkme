@@ -187,6 +187,7 @@
   font-family: 'Kanit', sans-serif;
   margin-left: 10px;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .box{
@@ -429,8 +430,8 @@ body {
   background-color: #b0a9a9;
   color: white;
   padding: 5px 10px;
-  width: 150px; /* ปรับขนาดกรอบตามต้องการ */
-  padding: 5px; /* เพิ่มหรือปรับ padding ตามความเหมาะสม */
+  width: 150px; /* ปรับขนาดกรอบ */
+  padding: 5px; 
   border: 1px solid #ccc; /* กรอบของช่อง */
   border-radius: 18px; /* ทำมุมโค้ง */
 }
@@ -442,6 +443,16 @@ body {
   color: #4a3d3d;
   text-align: left; /* จัดข้อความให้ชิดขวา */
   margin-left: 130px; /* ระยะห่างจากขอบขวา */
+}
+
+.board-container {
+  background-color: #4e4e4e; /* สีพื้นหลังของกล่อง */
+  padding: 2px 15px 15px 15px;
+  border-radius: 10px;
+  max-width: 600px; /* ความกว้างสูงสุดของกล่อง */
+  margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+  margin-top: 20px;
+  min-height: 50px; /* ความสูงขั้นต่ำของกล่อง สามารถเปลี่ยนตามต้องการได้ */
 }
 
 .board-tabs {
@@ -457,10 +468,11 @@ body {
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  font-family: "Kanit", sans-serif;
 }
 
 .tab.active {
-  background-color: #444444;
+  background-color: #8b8888;
 }
 
 .board-content {
@@ -469,5 +481,100 @@ body {
   padding: 15px;
   border-radius: 10px;
   margin-top: 20px;
+}
+
+/* หน้าแก้ไขโปรไฟล์ */
+.edit-image-button {
+  position: absolute;
+  top: 350px; /* ปรับตำแหน่ง*/
+  left: 960px; 
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Kanit', sans-serif;
+}
+
+.edit-image-button:hover {
+  background-color: #357ab8; /* สีเมาส์ชี้ */
+}
+
+.user-id {
+  font-size: 1rem;
+  color: #4a3d3d;
+  margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างป้ายกับกล่อง */
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto; /* จัดให้อยู่ตรงกลางหน้า */
+  width: 40%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* ตั้งความสูงเพื่อให้องค์ประกอบอยู่กึ่งกลางหน้า */
+}
+
+.form-group-inline {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+label {
+  width: 150px; /* ความกว้างของ label */
+  margin-right: 10px;
+  text-align: right;
+  font-size: 1.1rem;
+  margin-bottom: 5px; /* เพิ่มระยะห่างระหว่างป้ายกับกล่อง */
+}
+
+input {
+  flex: 1;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: 'Kanit', sans-serif;
+  font-size: 1.1rem;
+  border-radius: 18px; /* ทำมุมโค้ง */
+}
+
+.button-group {
+  display: flex;
+  justify-content: center; /* จัดให้อยู่ตรงกลาง */
+  gap: 20px; /* ระยะห่างระหว่างปุ่ม */
+  margin-top: 20px; /* ระยะห่างด้านบน */
+}
+
+.save-button,
+.cancel-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-button {
+  background-color: #3E3939; /* สีพื้นหลังของปุ่ม SAVE */
+  color: white;
+  font-family: 'Kanit', sans-serif;
+  border-radius: 18px; /* ทำมุมโค้ง */
+}
+
+.cancel-button {
+  background-color: #fcfbfb; /* สีพื้นหลังของปุ่ม CANCEL */
+  color: #3E3939;
+  font-family: 'Kanit', sans-serif;
+  border-radius: 18px; /* ทำมุมโค้ง */
 }
 
