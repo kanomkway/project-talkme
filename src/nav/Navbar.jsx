@@ -22,29 +22,29 @@ const Navbar = () => {
 
     const navbarItems = [
         {
-          path: "/userinfo",
+          path: "/profile",
           label: "Profile",
-          icon: <FaUser size={20} />,
+          icon: <FaUser size={24} />,
         },
         {
           path: "/tags",
           label: "Tags",
-          icon: <FaHashtag size={20} />,
+          icon: <FaHashtag size={24} />,
         },
         {
           path: "/my_board",
           label: "My Board",
-          icon: <BsClipboard2PlusFill size={20} />,
+          icon: <BsClipboard2PlusFill size={24} />,
         },
         {
           path: "/participate_board",
           label: "Participate Board",
-          icon: <BsFillClipboard2PulseFill size={20} />,
+          icon: <BsFillClipboard2PulseFill size={24} />,
         },
         {
           path: "/followed_board",
           label: "Followed Board",
-          icon: <BsFillClipboard2HeartFill size={20} />,
+          icon: <BsFillClipboard2HeartFill size={24} />,
         },
       ]
 
@@ -70,7 +70,14 @@ const Navbar = () => {
     return (
     <>
       <div className="head">
-        <img className='pointer' style={{marginLeft: 30}} align="left" src="src/logo.png" width={100} alt="logo"></img>
+        <a href="/">
+        <img className='pointer' 
+        style={{marginLeft: 30}} 
+        align="left" 
+        src="src/logo.png" 
+        width={100} 
+        alt="logo"></img>
+        </a>
         <div className="search-container">
           <input
             className="search-input"
@@ -85,7 +92,9 @@ const Navbar = () => {
             className="search-icon"
           />
         </div>
-        <button className="log-button pointer">เข้าสู่ระบบ / Log In</button>
+        <a href="/login">
+          <button className="log-button pointer">เข้าสู่ระบบ / Log In</button>
+        </a>
       </div>
 
       <nav className="navbar">
