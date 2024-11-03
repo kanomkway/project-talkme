@@ -74,7 +74,7 @@ const Navbar = () => {
         <img className='pointer' 
         style={{marginLeft: 30}} 
         align="left" 
-        src="src/logo.png" 
+        src="src/img/logo.png" 
         width={100} 
         alt="logo"></img>
         </a>

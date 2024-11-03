@@ -10,7 +10,7 @@ const LoginScreen = () => {
         <div className="App">
             <div>
                 <img 
-                    src='src/logo.png'
+                    src='src/img/logo.png'
                     width={250}
                     style={{
                         marginTop: "50px",
@@ -21,7 +21,7 @@ const LoginScreen = () => {
             </div>
             <div>
                 <img
-                    src='src/login_google.png'
+                    src='src/img/login_google.png'
                     width={300}
                     style={{
                         marginTop: "35px",
