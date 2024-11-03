@@ -486,7 +486,7 @@ body {
 /* หน้าแก้ไขโปรไฟล์ */
 .edit-image-button {
   position: absolute;
-  top: 350px; /* ปรับตำแหน่ง*/
+  top: 210px; /* ปรับตำแหน่ง*/
   left: 960px; 
   padding: 5px 10px;
   font-size: 0.8rem;
