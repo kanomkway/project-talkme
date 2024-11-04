@@ -13,8 +13,13 @@ import GeneralPage from "./GeneralPage";
 
 import EditProfileScreen from "./EditProfileScreen";
 
-import MyBoardScreen from "./MyBoardScreen";
-import CreatePostScreen from "./CreatePostScreen";
+import EditProfileScreen from './EditProfileScreen';
+
+import MyBoardScreen from './MyBoardScreen';
+import CreatePostScreen from './CreatePostScreen';
+import ParticipatedScreen from './ParticipatedScreen';
+
+import FollowedBoardScreen from './FollowedBoardScreen';
 
 function App() {
   return (
@@ -25,16 +30,20 @@ function App() {
         <Route path="/profile" element={<ProfileScreen />} />
         <Route path="/login" element={<LoginScreen />} />
         <Route path="/tags" element={<TagScreen />} />
+        <Route path="/participate_board" element={<ParticipatedScreen/>}/>
+
 
         <Route path="/editProfile" element={<EditProfileScreen />} />
-
-        <Route path="/my_board" element={<MyBoardScreen />} />
 
         <Route path="/general-p" element={<GeneralPage />} />
         <Route path="/music-p" element={<PageSelectedScreen />} />
         <Route path="/pet-p" element={<PageSelectedScreen />} />
         <Route path="/food-p" element={<PageSelectedScreen />} />
         <Route path="/travel-p" element={<PageSelectedScreen />} />
+
+        <Route path="/my_board" element={<MyBoardScreen />} />
+
+        <Route path="/followed_board" element={<FollowedBoardScreen/>} />
 
         <Route path="/create-p" element={<CreatePostScreen />} />
       </Routes>

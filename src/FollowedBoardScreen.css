@@ -1,0 +1,77 @@
+.main-content {
+    padding: 20px;
+  }
+  
+  .board-header {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.2rem;
+    color: #4a3d3d;
+    margin-left: 100px;
+  }
+  
+  .create-button {
+    background-color: #3E3939;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Post styles */
+
+  .post-container{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #5B5252;
+    color: #FFFFFF;
+    border-radius: 15px;
+    padding: 15px;
+  }
+
+  .post {
+    background-color: #887F7F;
+    color: #FFFFFF;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .post h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .post-date {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .post-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #D3C1B5;
+  }
+
+  .post-header {
+    display: flex;
+    justify-content: space-between; /* จัดให้หัวข้อกับไอคอนดาวอยู่ห่างกัน */
+    align-items: center; 
+    width: 100%;
+  }
+  
+  .post-header h3 {
+    margin: 0; /* เอาขอบของหัวเรื่องออกเพื่อไม่ให้เกิดช่องว่าง */
+    flex-grow: 1; /*ขยายพื้นที่ชื่อเรื่อง */
+  }
+  
+  .star-icon {
+    color: gold;
+    font-size: 2em;
+    margin-left: auto;
+  }

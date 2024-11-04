@@ -1,0 +1,80 @@
+.main-content {
+    padding: 20px;
+  }
+
+  .board-header {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.2rem;
+    color: #4a3d3d;
+    margin-left: 100px;
+  }
+
+  .search-tags {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 5px 10px;
+  }
+
+  .search-tags input {
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    color: #4a3d3d;
+    margin-right: 20px;
+  }
+
+  .search-icon-small {
+    font-size: 1.2rem;
+    color: #4a3d3d;
+    margin-left: 250px;
+  }
+
+  .sort-button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #4a3d3d;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .tag {
+    background-color: #887F7F;
+    color: white;
+    border: none;
+    border-radius: 15px; /* เพิ่มความโค้ง */
+    padding: 20px 30px; /* ขยายขนาดกล่อง */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-right: 20px;
+    
+  }
+  
+  .tag.active {
+    background-color: #3e3e3e;
+  }
+  
+  .tag-icon {
+    font-size: 2.5rem; /* ขยายขนาดไอคอน */
+    margin-bottom: 5px; /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
+  }
+  
+  .tags-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+  }
+  
+  .tags-header h2 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #4a3d3d;
+  }
