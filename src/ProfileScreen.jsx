@@ -1,16 +1,16 @@
 import './App.css';
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import {
-  Routes,
-  Route,
-  useNavigate,
-  NavLink,
-  Link,
-} from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 function ProfileScreen() {
     const [value, setValue] = useState("Type Here!")
+
+    const navigate=useNavigate();
+
+    const EditProfile=()=>{
+      navigate('/editProfile');
+    }
 
   return (
     <div className="App">
@@ -20,9 +20,10 @@ function ProfileScreen() {
       
         <div class="profile-container">
           <div class="profile-left">
-            <button class="edit-profile-btn">EDIT PROFILE <i class="icon-edit"></i></button>
+          <img src="path/to/profile-image.jpg" alt="Profile" class="profile-image" />
+            <button class="edit-profile-btn" onClick={EditProfile}>EDIT PROFILE <i class="icon-edit"></i></button>
             <button class="logout-btn">LOG OUT</button>
-        </div>
+          </div>
         
         <div class="profile-right">
                 <div class="user-info">
@@ -31,13 +32,15 @@ function ProfileScreen() {
                     <div class="user-info-label">ID User :</div>
                     <div class="user-info-value">0000001</div>
                 </div>
-                <div class="board-tabs">
-                    <button class="tab active">MY BOARD</button>
-                    <button class="tab">FOLLOWED BOARD</button>
-                    <button class="tab">COMMENTED BOARD</button>
-                </div>
-                <div class="board-content">
-                    <p>ผมอยากถูกหวย แต่ไม่อยากซื้อหวย เพราะไม่มีดวงเรื่องนี้ 1 ตุลาคม 2567 ชาวบ้านจำนวนมากแห่ซื้อเลขดัง...</p>
+                <div class="board-container">
+                  <div class="board-tabs">
+                      <button class="tab active">MY BOARD</button>
+                      <button class="tab">FOLLOWED BOARD</button>
+                      <button class="tab">COMMENTED BOARD</button>
+                  </div>
+                  <div class="board-content">
+                      <p>...</p>
+                  </div>
                 </div>
             </div>
         </div>
