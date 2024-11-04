@@ -344,6 +344,8 @@ body {
   font-size: 2.3rem;
   font-weight: 700;
   color: #4a3d3d;
+  text-align: left;
+  margin-left: 100px;
 }
 
 .profile-container {
@@ -434,15 +436,6 @@ body {
   padding: 5px; 
   border: 1px solid #ccc; /* กรอบของช่อง */
   border-radius: 18px; /* ทำมุมโค้ง */
-}
-
-.profile-header h2 {
-  font-family: 'Kanit', sans-serif;
-  font-size: 2.3rem;
-  font-weight: 700;
-  color: #4a3d3d;
-  text-align: left; /* จัดข้อความให้ชิดขวา */
-  margin-left: 130px; /* ระยะห่างจากขอบขวา */
 }
 
 .board-container {
