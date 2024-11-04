@@ -14,37 +14,37 @@ function ProfileScreen() {
 
   return (
     <div className="App">
-      <div className="profile-header">
-            <h2>Profile</h2>
+      <main className='main-content'>
+        <div className="profile-header">
+              <h2>Profile</h2>
         </div>
-      
-        <div class="profile-container">
-          <div class="profile-left">
-          <img src="path/to/profile-image.jpg" alt="Profile" class="profile-image" />
-            <button class="edit-profile-btn" onClick={EditProfile}>EDIT PROFILE <i class="icon-edit"></i></button>
-            <button class="logout-btn">LOG OUT</button>
-          </div>
-        
-        <div class="profile-right">
-                <div class="user-info">
-                    <div class="user-info-label">Name User :</div>
-                    <div class="user-info-value">CHATjam</div>
-                    <div class="user-info-label">ID User :</div>
-                    <div class="user-info-value">0000001</div>
-                </div>
-                <div class="board-container">
-                  <div class="board-tabs">
-                      <button class="tab active">MY BOARD</button>
-                      <button class="tab">FOLLOWED BOARD</button>
-                      <button class="tab">COMMENTED BOARD</button>
-                  </div>
-                  <div class="board-content">
-                      <p>...</p>
-                  </div>
-                </div>
+          <div class="profile-container">
+            <div class="profile-left">
+              <img src="path/to/profile-image.jpg" alt="Profile" class="profile-image" />
+              <button class="edit-profile-btn" onClick={EditProfile}>EDIT PROFILE <i class="icon-edit"></i></button>
+              <button class="logout-btn">LOG OUT</button>
             </div>
-        </div>
-        </div>
+            <div class="profile-right">
+              <div class="user-info">
+                <div class="user-info-label">Name User :</div>
+                <div class="user-info-value">CHATjam</div>
+                <div class="user-info-label">ID User :</div>
+                <div class="user-info-value">0000001</div>
+              </div>
+              <div class="board-container">
+                <div class="board-tabs">
+                  <button class="tab active">MY BOARD</button>
+                  <button class="tab">FOLLOWED BOARD</button>
+                  <button class="tab">COMMENTED BOARD</button>
+                </div>
+                <div class="board-content">
+                  <p>...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </main>
+    </div>
     );
 }
 
