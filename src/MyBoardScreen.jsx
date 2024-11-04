@@ -13,11 +13,17 @@ function MyBoardScreen() {
 
   const [value, setValue] = useState("Type Here!")
 
+  const navigate = useNavigate();
+
+  const gotoCreatePost=()=>{
+    navigate('/create-p');
+  }
+
   return (
     <main className="main-content">
         <div className="board-header">
             <h2>MY BOARD</h2>
-            <button className="create-button">CREATE NEW ✎</button>
+            <button className="create-button" onClick={gotoCreatePost}>CREATE NEW ✎</button>
         </div>
             <div className='post-container'>
                 <p style={{ marginLeft: "auto" }}>Popular Board ▼</p>

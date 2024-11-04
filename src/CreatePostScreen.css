@@ -50,6 +50,7 @@
 .input-group {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     margin-bottom: 10px;
 }
 
@@ -60,12 +61,16 @@
 }
 
 .input-field {
-    background-color: #807c7c;
+    background-color: #887F7F;
     color: #FFFFFF;
     border: none;
     padding: 8px;
-    border-radius: 5px;
+    border-radius: 15px;
     width: 100%;
+}
+
+.input-field::placeholder{
+    color:#FFFFFF;
 }
 
 .dropdown {
@@ -73,31 +78,40 @@
 }
 
 .dropdown-select {
-    background-color: #807c7c;
+    background-color: #887F7F;
     color: #FFFFFF;
     border: none;
     padding: 8px;
-    border-radius: 5px;
-    width: 100%;
+    border-radius: 20px;
+    width: 30%;
 }
 
 .content-container {
+    background-color: #5B5252;
     margin-top: 20px;
+    padding-top: 10px;
 }
 
 .content-container label {
-    color: #3E3939;
+    color: #FFFFFF;
     font-weight: bold;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 .content-field {
-    background-color: #807c7c;
+    background-color: #887F7F;
     color: #FFFFFF;
-    width: 100%;
+    width: 90%;
     height: 150px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
-    margin-top: 10px;
+    margin-top: 15px;
+    margin: 10px;
     resize: none;
+}
+
+.content-field::placeholder{
+    color: #FFFFFF;
 }

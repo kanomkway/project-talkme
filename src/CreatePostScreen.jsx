@@ -33,9 +33,9 @@ function CreatePostScreen() {
                     <label>Category :</label>
                     <div className="dropdown">
                         <select className="dropdown-select">
-                            <option>สัตว์เลี้ยง</option>
-                            <option>เทคโนโลยี</option>
-                            <option>ข่าวสาร</option>
+                            <option>ทั่วไป</option>
+                            <option>อาหาร</option>
+                            <option>เพลง</option>
                         </select>
                     </div>
                 </div>
