@@ -16,7 +16,7 @@ function ParticipatedScreen() {
   return (
     <main className='main-content'>
         <div className="board-header">
-                <h2>Participated Board</h2>
+                <h2>PARTICIPATED BOARD</h2>
         </div>
         <div className='post-container'>
             <p style={{ marginLeft: "auto" }}>Recently Board ▼</p>
