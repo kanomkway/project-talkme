@@ -19,6 +19,7 @@ import EditProfileScreen from './EditProfileScreen';
 
 import MyBoardScreen from './MyBoardScreen';
 import CreatePostScreen from './CreatePostScreen';
+import ParticipatedScreen from './ParticipatedScreen';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/profile" element={<ProfileScreen />} />
         <Route path="/login" element={<LoginScreen />} />
         <Route path="/tags" element={<TagScreen />} />
+        <Route path="/participate_board" element={<ParticipatedScreen/>}/>
 
         <Route path="/editProfile" element={<EditProfileScreen/>}/>
 

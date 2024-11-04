@@ -47,7 +47,6 @@
   color: #FFFFFF;
   padding: 15px;
   border-radius: 10px;
-  margin-bottom: 20px;
 }
 
 .post h3 {
@@ -57,7 +56,7 @@
 
 .post-date {
   font-size: 14px;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .post-footer {
@@ -65,4 +64,20 @@
   justify-content: space-between;
   font-size: 14px;
   color: #D3C1B5;
+}
+
+.reply-post{
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.reply-post-box{
+  background-color: #887F7F;
+  color: #FFFFFF;
+  padding-left: 15px;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-left: auto;
+  width: 90%;
 }
