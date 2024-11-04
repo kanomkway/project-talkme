@@ -40,7 +40,7 @@ function GeneralPage() {
 
   return (
     <main className="main-content">
-      <div className="board-header ml-90">
+      <div className="tag-header">
         <h2>TAG : GENERAL</h2>
       </div>
 
