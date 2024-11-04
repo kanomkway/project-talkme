@@ -28,10 +28,10 @@ function TagScreen() {
 
       <div className="tags">
         <button className="tag active">
-        <img src="path/to/image1.png" alt="ทั่วไป" width="20" height="20" />
+        <img src="src/img/ปุ่มหมวดทั่วไป.png" alt="ทั่วไป" width="40px" height="50px" />
         </button>
         <button className="tag">
-          <div>ท่องเที่ยว</div>
+        <img src="src/img/ปุ่มหมวดท่องเที่ยว.png" alt="ทั่วไป" width="40px" height="50px" />
         </button>
         <button className="tag">
           <div>เพลง</div>

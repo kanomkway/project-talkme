@@ -18,6 +18,7 @@ import TagScreen from './TagScreen';
 import EditProfileScreen from './EditProfileScreen';
 
 import MyBoardScreen from './MyBoardScreen';
+import CreatePostScreen from './CreatePostScreen';
 
 
 function App() {
@@ -41,7 +42,7 @@ function App() {
         <Route path="/food-p" element={<PageSelectedScreen/>}/>
         <Route path="/travel-p" element={<PageSelectedScreen/>}/>
 
-
+        <Route path="/create-p" element={<CreatePostScreen/>}/>
       </Routes>
     </Router>
   )
