@@ -1,4 +1,3 @@
-import './App.css';
 import './TagScreen.css';
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
@@ -14,38 +13,34 @@ function TagScreen() {
   const [value, setValue] = useState("Type Here!");
 
   return (
-    <div className="App">
       <main className="main-content">
-        <div className="tags-header">
-          <div className="profile-header"> 
-              <h2>Tag</h2>  
-          </div>
+        <div className="board-header">
+          <h2>TAGS</h2>  
           <div className="search-tags">
             <input type="text" placeholder="ค้นหาชื่อแท็ก" />
             <FaSearch className="search-icon-small" />
-            <button className="sort-button">ก - ฮ ▼</button>
           </div>
-      </div>
+          <button className="sort-button">ก - ฮ ▼</button>
+        </div>
 
       <div className="tags">
-        <button className="tag active">
+        <button className="tag">
         <img src="src/img/ปุ่มหมวดทั่วไป.png" alt="ทั่วไป" width="40px" height="50px" />
         </button>
         <button className="tag">
         <img src="src/img/ปุ่มหมวดท่องเที่ยว.png" alt="ทั่วไป" width="40px" height="50px" />
         </button>
         <button className="tag">
-          <div>เพลง</div>
+        <img src="src/img/ปุ่มหมวดเพลง.png" alt="ทั่วไป" width="40px" height="50px" />
         </button>
         <button className="tag">
-          <div>สัตว์เลี้ยง</div>
+        <img src="src/img/ปุ่มหมวดสัตว์เลี้ยง.png" alt="ทั่วไป" width="40px" height="50px" />
         </button>
         <button className="tag">
-          <div>อาหาร</div>
+        <img src="src/img/ปุ่มหมวดอาหาร.png" alt="ทั่วไป" width="40px" height="50px" />
         </button>
       </div>
       </main>
-    </div>
   );
 }
 
