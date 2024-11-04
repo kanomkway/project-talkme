@@ -21,6 +21,8 @@ import MyBoardScreen from './MyBoardScreen';
 import CreatePostScreen from './CreatePostScreen';
 import ParticipatedScreen from './ParticipatedScreen';
 
+import FollowedBoardScreen from './FollowedBoardScreen';
+
 
 function App() {
   return (
@@ -33,10 +35,11 @@ function App() {
         <Route path="/tags" element={<TagScreen />} />
         <Route path="/participate_board" element={<ParticipatedScreen/>}/>
 
-        <Route path="/editProfile" element={<EditProfileScreen/>}/>
+        <Route path="/editProfile" element={<EditProfileScreen />}/>
 
         <Route path="/my_board" element={<MyBoardScreen />} />
 
+        <Route path="/followed_board" element={<FollowedBoardScreen/>} />
 
         <Route path="/general-p" element={<PageSelectedScreen/>}/>
         <Route path="/music-p" element={<PageSelectedScreen/>}/>

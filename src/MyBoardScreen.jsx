@@ -34,8 +34,8 @@ function MyBoardScreen() {
                         <span>👍 1207  👎</span>
                         <span>อนาคตคนรวย</span>
                     </div>
-            </div>
-        </div>
+                </div>
+          </div>
     </main>
   );
 }
