@@ -1,21 +1,20 @@
 import './TagScreen.css';
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import {
-  Routes,
-  Route,
-  useNavigate,
-  NavLink,
-  Link,
-} from "react-router-dom";
+import { Routes, Route, useNavigate, NavLink, Link } from "react-router-dom";
 
 function TagScreen() {
   const [value, setValue] = useState("Type Here!");
 
+  const navigate = useNavigate();
+  const toGeneral = () => {
+    navigate("/general-p");
+  };
+
   return (
       <main className="main-content">
         <div className="board-header">
-          <h2>TAGS</h2>  
+          <h2>TAGS</h2> 
           <div className="search-tags">
             <input type="text" placeholder="ค้นหาชื่อแท็ก" />
             <FaSearch className="search-icon-small" />
@@ -24,7 +23,7 @@ function TagScreen() {
         </div>
 
       <div className="tags">
-        <button className="tag">
+        <button className="tag" onClick={toGeneral}>
         <img src="src/img/ปุ่มหมวดทั่วไป.png" alt="ทั่วไป" width="40px" height="50px" />
         </button>
         <button className="tag">
