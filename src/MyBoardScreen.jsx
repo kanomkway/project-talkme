@@ -1,4 +1,4 @@
-import './MyBoardScreen.css';
+import "./MyBoardScreen.css"
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import {
@@ -25,7 +25,7 @@ function MyBoardScreen() {
             <h2>MY BOARD</h2>
             <button className="create-button" onClick={gotoCreatePost}>CREATE NEW ✎</button>
         </div>
-            <div className='post-container'>
+            <div className="post-container">
                 <p style={{ marginLeft: "auto" }}>Popular Board ▼</p>
                 <div className="post">
                     <h3>ผมอยากถูกหวย แต่ไม่อยากซื้อหวย เพราะไม่มีตังซื้อหวยอีกที</h3>
