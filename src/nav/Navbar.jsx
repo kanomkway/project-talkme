@@ -51,22 +51,6 @@ const Navbar = () => {
   const [isNavbarCollapsed, setNavbarCollapsed] = useState(false);
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     if (window.innerWidth <= 800) {
-  //       setNavbarCollapsed(true);
-  //     } else {
-  //       setNavbarCollapsed(false);
-  //     }
-  //   };
-
-  //   window.addEventListener("resize", handleResize);
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
-
   const handleSearch = () => {
     console.log(value);
     if (value.trim()) {
@@ -116,16 +100,29 @@ const Navbar = () => {
       </div>
 
       <nav className="navbar">
-        {navbarItems.map((item, index) => (
-          <Link
-            key={index}
-            to={item.path}
-            className={`navbar-item ${pathname === item.path ? "active" : ""}`}
-          >
-            {item.icon}
-            <span>{item.label}</span>
-          </Link>
-        ))}
+        {navbarItems
+          .filter((item) => {
+            // Profile และ My Board จะแสดงเฉพาะเมื่อมี username
+            if (
+              (item.label === "Profile" || item.label === "My Board") &&
+              !username
+            ) {
+              return false; // ไม่แสดงถ้าไม่มี username
+            }
+            return true;
+          })
+          .map((item, index) => (
+            <Link
+              key={index}
+              to={item.path}
+              className={`navbar-item ${
+                pathname === item.path ? "active" : ""
+              }`}
+            >
+              {item.icon}
+              <span>{item.label}</span>
+            </Link>
+          ))}
       </nav>
     </>
   );
