@@ -65,6 +65,7 @@ function MainScreen() {
     const con={
       id: item.id,
       title: item.title,
+      cont:item.content,
       tag:item.tag
     }
     navigate('/content',{state:con});
@@ -74,7 +75,7 @@ function MainScreen() {
   const contentList = content?.map((item, index) => (
       <div className="mainS-content-container" key={index} onClick={() => handleNavigate(item)}>
         <div className="mainS-img-content">
-          a
+          a 
           {console.log(item)}
         </div>
         <div className="mainS-content">

@@ -44,6 +44,7 @@ function FoodPage() {
     const con={
       id: item.id,
       title: item.title,
+      cont:item.content,
       tag:item.tag
     }
     navigate('/content',{state:con});

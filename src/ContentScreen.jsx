@@ -16,7 +16,7 @@ function ContentScreen() {
 
   const apiurl = "http://localhost:5000";
   const location = useLocation();
-  const {id,title,content,tag} = location.state || {};
+  const {id,title,cont,content,tag} = location.state || {};
 
   const [comment,setComment] = useState([]);
 
@@ -109,12 +109,12 @@ function ContentScreen() {
   return (
     <main className="main-content">
     <div className="post-content-container">
-      <h3 className="post-title">{title}</h3>
+      <h3 className="post-title">{title}a</h3>
       <p className="post-content">
-        {content}
+        {cont}
       </p>
       <div className="post-footer">
-        <button className="like-button">👍 978</button>
+        <button className="like-button"></button>
         <button className="share-button">เล็งหัวอิงหู</button>
       </div>
     </div>
