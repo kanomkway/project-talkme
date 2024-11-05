@@ -14,7 +14,7 @@ const Navbar = () => {
   const { pathname } = location;
   const userName = localStorage.getItem("name");
   const userID = localStorage.getItem("id");
-  const [value, setValue] = useState("Type Here!");
+  const [value, setValue] = useState("");
 
   const navbarItems = [
     {
@@ -45,7 +45,7 @@ const Navbar = () => {
   ];
 
   const [isNavbarCollapsed, setNavbarCollapsed] = useState(false);
-  const Nav = useNavigate();
+  const navigate = useNavigate();
 
   // useEffect(() => {
   //   const handleResize = () => {
@@ -62,6 +62,19 @@ const Navbar = () => {
   //     window.removeEventListener("resize", handleResize);
   //   };
   // }, []);
+
+  const handleSearch = () => {
+    console.log(value);
+    if (value.trim()) {
+      navigate(`/search?query=${encodeURIComponent(value)}`);
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleSearch();
+    }
+  };
 
   return (
     <>
@@ -81,11 +94,12 @@ const Navbar = () => {
             className="search-input"
             type="text"
             value={value}
+            placeholder="พิมพ์ที่นี่"
             onFocus={() => setValue("")}
             onChange={(e) => setValue(e.target.value)}
-            placeholder="ค้นหา"
+            onKeyDown={handleKeyDown}
           />
-          <FaSearch onClick={() => alert("TRY")} className="search-icon" />
+          <FaSearch onClick={handleSearch} className="search-icon" />
         </div>
         <a href="/login">
           <button className="log-button pointer">เข้าสู่ระบบ / Log In</button>

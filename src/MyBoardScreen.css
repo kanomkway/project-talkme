@@ -69,6 +69,14 @@
   color: #d3c1b5;
 }
 
+.post-search {
+  background-color: #7d6e6e;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-right: 60px;
+}
+
 .long-text {
   white-space: nowrap; /* ทำให้ข้อความอยู่ในบรรทัดเดียว */
   overflow: hidden; /* ซ่อนข้อความที่ยาวเกิน */
