@@ -104,7 +104,7 @@ function ContentScreen() {
   return (
     <main className="main-content">
       <div className="post-content-container">
-        <h3 className="post-title">{title}a</h3>
+        <h3 className="post-title">{title}</h3>
         <p className="post-content">{cont}</p>
       </div>
       {commentList}

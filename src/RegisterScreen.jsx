@@ -39,6 +39,8 @@ const RegisterScreen = () => {
         icon: "success",
         text: data.message,
         confirmButtonColor: "#134e4a",
+      }).then(() => {
+        toLogin();
       });
     } catch (error) {
       console.log("error:", error);
