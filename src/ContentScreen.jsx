@@ -21,6 +21,51 @@ function ContentScreen() {
 
   const [value, setValue] = useState("Type Here!")
 
+  const insertComment = async () => {
+    console.log(title, category);
+    if (!title || !category) {
+      Swal.fire({
+        title: "ผิดพลาด!",
+        text: "กรอกข้อมูลให้ครบ",
+        icon: "error",
+        confirmButtonColor: "#134e4a",
+      });
+      return;
+    }
+    console.log("Sending:", {
+      category: category,
+      title: title,
+      content: content,
+    });
+
+    try {
+      const responsedata = await axios.post(`${apiurl}/api/addto/${category}`, {
+        title: title,
+        content: content,
+      });
+      const data = responsedata.data;
+
+      Swal.fire({
+        title: "เผยแพร่สำเร็จ!",
+        icon: "success",
+        text: data.message,
+        confirmButtonColor: "#134e4a",
+      }).then(() => {
+        window.location.href = "/";
+      });
+    } catch (error) {
+      console.log("error:", error);
+      const errorMessage =
+        error.response?.data?.message || "เกิดข้อผิดพลาดในการเชื่อมต่อ";
+      Swal.fire({
+        title: "ข้อมูลผิดพลาด!",
+        text: errorMessage,
+        icon: "error",
+        confirmButtonColor: "#134e4a",
+      });
+    }
+  };
+
   return (
     <main className="main-content">
     <div className="post-content-container">
@@ -47,7 +92,10 @@ function ContentScreen() {
     <div className="comment-input-container">
       <label htmlFor="comment">Comment :</label>
       <textarea id="comment" className="comment-input" placeholder="Write a comment..."></textarea>
-      <button className="send-button">SEND</button>
+      <button className="send-button"
+      onClick={()=>insertComment()}
+      >
+        SEND</button>
     </div>
   </main>
   );
