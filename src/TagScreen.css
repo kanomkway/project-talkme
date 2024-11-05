@@ -1,88 +1,89 @@
 .main-content {
-    padding: 20px;
-  }
+  padding: 20px;
+}
 
-  .board-header {
-    font-family: 'Kanit', sans-serif;
-    font-size: 1.2rem;
-    color: #4a3d3d;
-    margin-left: 100px;
-  }
+.board-header {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.2rem;
+  color: #4a3d3d;
+  margin-left: 100px;
+}
 
-  .search-tags {
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 20px;
-    padding: 5px 10px;
-  }
+.search-tags {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
 
-  .search-tags input {
-    border: none;
-    outline: none;
-    font-size: 0.9rem;
-    color: #4a3d3d;
-  }
+.search-tags input {
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  color: #4a3d3d;
+  width: 80px;
+}
 
-  .search-icon-small {
-    font-size: 1.2rem;
-    color: #4a3d3d;
-    margin-left: 150px;
-  }
+.search-icon-small {
+  font-size: 1.2rem;
+  color: #4a3d3d;
+  margin-left: 150px;
+}
 
-  .sort-button {
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    color: #4a3d3d;
-    margin-left: 10px;
-    cursor: pointer;
-  }
+.sort-button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #4a3d3d;
+  margin-left: 10px;
+  cursor: pointer;
+}
 
-  .tags {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-  }
+.tags {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
 
-  .tag {
-    background-color: #887F7F;
-    box-shadow: none;
-    padding: 1%;
-    font-size: 2rem;
-    border-radius: 20px;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    margin-right: 20px;
-  }
+.tag {
+  background-color: #887f7f;
+  box-shadow: none;
+  padding: 1%;
+  font-size: 2rem;
+  border-radius: 20px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
 
-  .tag:hover {
-    background-color: #5b5252;
-  }
-  
-  .tag.active {
-    background-color: #3e3e3e;
-  }
-  
-  .tag-icon {
-    font-size: 2.5rem; /* ขยายขนาดไอคอน */
-    margin-bottom: 5px; /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
-  }
-  
-  .tags-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 10px;
-    margin-bottom: 10px;
-  }
-  
-  .tags-header h2 {
-    font-family: 'Kanit', sans-serif;
-    font-size: 2.3rem;
-    font-weight: 700;
-    color: #4a3d3d;
-  }
+.tag:hover {
+  background-color: #5b5252;
+}
+
+.tag.active {
+  background-color: #3e3e3e;
+}
+
+.tag-icon {
+  font-size: 2.5rem; /* ขยายขนาดไอคอน */
+  margin-bottom: 5px; /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
+}
+
+.tags-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+.tags-header h2 {
+  font-family: "Kanit", sans-serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #4a3d3d;
+}
