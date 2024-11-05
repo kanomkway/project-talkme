@@ -19,7 +19,7 @@ function ProfileScreen() {
         </div>
           <div class="profile-container">
             
-            <div class="profile-left">
+            <div className="profile-left">
             <div className="profile-image-container">
               <img src="src/img/flower.png" alt="ทั่วไป" className="profile-image" />
             </div>
