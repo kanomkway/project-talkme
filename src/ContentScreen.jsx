@@ -57,7 +57,7 @@ function ContentScreen() {
     if (!id || !info || !tag) {
       Swal.fire({
         title: "ผิดพลาด!",
-        text: "กรอกข้อมูลให้ครบ",
+        text: "เกิดข้อผิดพลาดในการทำรายการ",
         icon: "error",
         confirmButtonColor: "#134e4a",
       });

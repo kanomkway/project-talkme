@@ -83,7 +83,9 @@ function MainScreen() {
     return ''; // กรณีไม่มี tag ที่ตรงกัน
   };
 
-  const contentList = content?.map((item, index) => (
+  const sortedContent = content?.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  const contentList = sortedContent?.map((item, index) => (
       <div className="mainS-content-container" key={index} onClick={() => handleNavigate(item)}>
         <div className="mainS-img-content">
           <img src={getImageByTag(item.tag)}/>

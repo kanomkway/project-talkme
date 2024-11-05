@@ -19,6 +19,7 @@ function Item(props) {
 function GeneralPage() {
   const [value, setValue] = useState("Type Here!");
   const [content, setContent] = useState([]);
+  const [sortOrder, setSortOrder] = useState('recent');
 
   const navigate = useNavigate();
 
@@ -51,7 +52,19 @@ function GeneralPage() {
     console.log(con)
   };
 
-  const contentList = content?.map((item, index) => (
+  const handleSortChange = (event) => {
+    setSortOrder(event.target.value);
+  };
+  
+  const sortedContent = content?.sort((a, b) => {
+    if (sortOrder === 'recent') {
+      return new Date(b.date) - new Date(a.date);
+    } else {
+      return new Date(a.date) - new Date(b.date);
+    }
+  });
+
+  const contentList = sortedContent?.map((item, index) => (
     <div className="post" key={index} onClick={() => handleNavigate(item)}>
       <div className="mainS-content">
       <h2>
@@ -69,11 +82,13 @@ function GeneralPage() {
       </div>
 
       <div className="post-container">
-        <select
+      <select
           className="dropdown-select"
           style={{ marginLeft: "auto", width: "150px" }}
+          onChange={handleSortChange}
         >
-          <option style={{}}>Recently Board</option>
+          <option value="recent">Recently Board</option>
+          <option value="oldest">Oldest Board</option>
         </select>
         <br />
         <div>{contentList}</div>
