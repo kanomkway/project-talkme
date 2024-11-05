@@ -14,6 +14,9 @@ function CreatePostScreen() {
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
   const [content, setContent] = useState("");
+  const userData = localStorage.getItem("user");
+  const user = userData ? JSON.parse(userData) : {}; // แปลง JSON เป็น object
+  const username = user.username || "";
 
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
@@ -37,12 +40,14 @@ function CreatePostScreen() {
       category: category,
       title: title,
       content: content,
+      username: username,
     });
 
     try {
       const responsedata = await axios.post(`${apiurl}/api/addto/${category}`, {
         title: title,
         content: content,
+        username: username,
       });
       const data = responsedata.data;
 

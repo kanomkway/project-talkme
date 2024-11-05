@@ -33,6 +33,10 @@ function MyBoardScreen() {
     navigate("/create-p");
   };
 
+  const userData = localStorage.getItem("user");
+  const user = userData ? JSON.parse(userData) : {}; // แปลง JSON เป็น object
+  const username = user.username || "";
+
   const [con, setCon] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -44,18 +48,17 @@ function MyBoardScreen() {
           axios.get(URL + "/api/music"),
         ]);
 
-        const generalWithCategory = generalData.data.map((item) => ({
-          ...item,
-          category: "general",
-        }));
-        const foodWithCategory = foodData.data.map((item) => ({
-          ...item,
-          category: "food",
-        }));
-        const musicWithCategory = musicData.data.map((item) => ({
-          ...item,
-          category: "music",
-        }));
+        const generalWithCategory = generalData.data
+          .filter((item) => item.username === username)
+          .map((item) => ({ ...item, category: "general" }));
+
+        const foodWithCategory = foodData.data
+          .filter((item) => item.username === username)
+          .map((item) => ({ ...item, category: "food" }));
+
+        const musicWithCategory = musicData.data
+          .filter((item) => item.username === username)
+          .map((item) => ({ ...item, category: "music" }));
 
         // รวมข้อมูล 3 ตาราง
         const combinedData = [
