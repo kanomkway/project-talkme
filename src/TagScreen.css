@@ -22,13 +22,12 @@
     outline: none;
     font-size: 0.9rem;
     color: #4a3d3d;
-    margin-right: 20px;
   }
 
   .search-icon-small {
     font-size: 1.2rem;
     color: #4a3d3d;
-    margin-left: 250px;
+    margin-left: 150px;
   }
 
   .sort-button {
