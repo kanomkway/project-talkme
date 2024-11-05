@@ -65,7 +65,7 @@ function MainScreen() {
     const con={
       id: item.id,
       title: item.title,
-      content: item.content
+      tag:item.tag
     }
     navigate('/content',{state:con});
     console.log(con)
@@ -75,6 +75,7 @@ function MainScreen() {
       <div className="mainS-content-container" key={index} onClick={() => handleNavigate(item)}>
         <div className="mainS-img-content">
           a
+          {console.log(item)}
         </div>
         <div className="mainS-content">
           <h2>{item.title}</h2>

@@ -9,17 +9,96 @@ import {
   Link,
   useLocation,
 } from "react-router-dom";
+import Swal from 'sweetalert2';
+import axios from 'axios';
 
 function ContentScreen() {
 
+  const apiurl = "http://localhost:5000";
   const location = useLocation();
-  const {id,title,content} = location.state || {};
+  const {id,title,content,tag} = location.state || {};
+
+  const [comment,setComment] = useState([]);
+
+  const URL = "http://localhost:5000";
+  useEffect(()=>{
+    axios
+    .get(URL+'/content')
+    .then(response=>{
+      setComment(response.data);
+      console.log(response.data);
+    })
+    .catch(error=>{
+      console.log("error!");
+    })
+    return ()=>{
+
+    }}
+    ,[])
 
   useEffect(()=>{
 
   },[title])
 
-  const [value, setValue] = useState("Type Here!")
+  const [info,setInfo] = useState("")
+
+  const handleInfo = (e) => {
+    setInfo(e.target.value);
+  };
+
+  const insertComment = async () => {
+    console.log(id, info,tag);
+    if (!id || !info || !tag) {
+      Swal.fire({
+        title: "ผิดพลาด!",
+        text: "กรอกข้อมูลให้ครบ",
+        icon: "error",
+        confirmButtonColor: "#134e4a",
+      });
+      return;
+    }
+    console.log("Sending:", {
+      id: id,
+      tag:tag,
+      info:info
+    });
+    try {
+      const responsedata = await axios.post(`${apiurl}/api/addcomment`, {
+        id:id,
+        tag:tag,
+        info: info,
+      });
+      const data = responsedata.data;
+
+      Swal.fire({
+        title: "แสดงความคิดเห็นสำเร็จ!",
+        icon: "success",
+        text: data.message,
+        confirmButtonColor: "#134e4a",
+      }).then(() => {
+        window.location.href = "/content";
+      });
+    } catch (error) {
+      console.log("error:", error);
+      const errorMessage =
+        error.response?.data?.message || "เกิดข้อผิดพลาดในการเชื่อมต่อ";
+      Swal.fire({
+        title: "ข้อมูลผิดพลาด!",
+        text: errorMessage,
+        icon: "error",
+        confirmButtonColor: "#134e4a",
+      });
+    }
+  };
+
+  const commentList = comment?.map((item, index) => (
+    <div className="comment-container" key={index}>
+      <h4>Comment #{index+1}</h4>
+      <p className="comment-content">
+        {item.info}
+      </p>
+    </div>
+));
 
   return (
     <main className="main-content">
@@ -33,21 +112,15 @@ function ContentScreen() {
         <button className="share-button">เล็งหัวอิงหู</button>
       </div>
     </div>
-    <div className="comment-container">
-      <h4>Comment #1</h4>
-      <p className="comment-content">
-        +10000 พี่ๆที่ชวนเล่นนี่สย...
-      </p>
-      <div className="comment-footer">
-        <button className="like-button">👍 113</button>
-        <button className="dislike-button">👎</button>
-        <p>เกิดมาแฉ</p>
-      </div>
-    </div>
+    {commentList}
     <div className="comment-input-container">
       <label htmlFor="comment">Comment :</label>
-      <textarea id="comment" className="comment-input" placeholder="Write a comment..."></textarea>
-      <button className="send-button">SEND</button>
+      <textarea id="comment" className="comment-input" placeholder="Write a comment..." 
+      onChange={handleInfo}></textarea>
+      <button className="send-button"
+      onClick={()=>insertComment()}
+      >
+        SEND</button>
     </div>
   </main>
   );
