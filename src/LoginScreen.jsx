@@ -98,7 +98,7 @@ const LoginScreen = () => {
         <input
           id="pass"
           value={pass}
-          type="text"
+          type="password"
           onChange={handlePassChange}
         ></input>
         <br />
