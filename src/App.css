@@ -248,13 +248,14 @@
   height: 130px;
   margin-bottom: 30px;
   flex-direction: row;
-  align-items: center;
   justify-content: flex-start;
+  
 }
 
 .mainS-img-content {
   width: 20%;
   border-radius: 15px;
+  align-self: center;
 }
 
 .mainS-content {
@@ -262,6 +263,15 @@
   border-radius: 15px;
   align-items: flex-start;
   margin: 0; 
+  display: flex; 
+  flex-direction: column;
+}
+
+.mainS-content h2{
+  width: 80%;
+  border-radius: 15px;
+  align-items: flex-start;
+  margin-bottom: 0; 
   display: flex; 
   flex-direction: column;
 }

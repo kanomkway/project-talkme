@@ -65,7 +65,18 @@ function MainScreen() {
     navigate('/travel-p');
   }
 
-  const contentList = content.map((item) => <Item {...item} />);
+  const contentList = content.map((item, index) => (
+      <div className="mainS-content-container" key={index}>
+        <div className="mainS-img-content">
+          a
+        </div>
+        <div className="mainS-content">
+          <h2>{item.title}</h2>
+          {item.content}
+        </div>
+      </div>
+  ));
+  
 
   return (
     <div className="App">
@@ -90,14 +101,7 @@ function MainScreen() {
       </div>
       <div className="mainS">
         <p className='mainS-text'>Recently Board</p>
-        <div className="mainS-content-container">
-            <div className="mainS-img-content">
-                a
-            </div>
-            <div className="mainS-content">
-                {contentList}
-            </div>
-        </div>
+        {contentList}
       </div>
     </div>
   );
