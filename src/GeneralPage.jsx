@@ -18,7 +18,7 @@ function Item(props) {
 
 function GeneralPage() {
   const [value, setValue] = useState("Type Here!");
-  const [con, setCon] = useState([]);
+  const [content, setContent] = useState([]);
 
   const navigate = useNavigate();
 
@@ -27,8 +27,8 @@ function GeneralPage() {
     axios
       .get(URL + "/api/general")
       .then((response) => {
-        setCon(response.data);
-        console.log(con);
+        setContent(response.data);
+        console.log(content);
       })
       .catch((error) => {
         console.log("error");
@@ -36,7 +36,30 @@ function GeneralPage() {
       });
   }, []);
 
-  const contentList = con.map((item) => <Item {...item} />);
+  const handleNavigate=(item)=>{
+    if (!item) {
+      console.error("Item is undefined");
+      return;
+    }
+    const con={
+      id: item.id,
+      title: item.title,
+      tag:item.tag
+    }
+    navigate('/content',{state:con});
+    console.log(con)
+  };
+
+  const contentList = content?.map((item, index) => (
+    <div className="post" key={index} onClick={() => handleNavigate(item)}>
+      <div className="mainS-content">
+      <h2>
+        #{item.id} &nbsp;{item.title}
+      </h2>
+        {item.content}
+      </div>
+    </div>
+));
 
   return (
     <main className="main-content">
