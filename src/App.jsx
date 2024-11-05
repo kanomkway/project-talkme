@@ -7,6 +7,7 @@ import Navbar from "./nav/Navbar";
 import MainScreen from "./MainScreen";
 import ProfileScreen from "./ProfileScreen";
 import LoginScreen from "./LoginScreen";
+import RegisterScreen from "./RegisterScreen";
 import PageSelectedScreen from "./PageSelectedScreen";
 import TagScreen from "./TagScreen";
 import GeneralPage from "./GeneralPage";
@@ -26,6 +27,7 @@ function App() {
         <Route path="/" element={<MainScreen />} />
         <Route path="/profile" element={<ProfileScreen />} />
         <Route path="/login" element={<LoginScreen />} />
+        <Route path="/register" element={<RegisterScreen />} />
         <Route path="/tags" element={<TagScreen />} />
         <Route path="/participate_board" element={<ParticipatedScreen />} />
 

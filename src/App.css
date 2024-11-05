@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 .kanit-bold {
   font-family: "Kanit", sans-serif;
@@ -12,7 +12,7 @@
 
 .App {
   text-align: center;
-  background-color: #FDD5B8;
+  background-color: #fdd5b8;
 }
 
 .App-header {
@@ -37,14 +37,14 @@
   display: flex;
   flex: column;
   align-items: center;
-  margin:auto;
+  margin: auto;
   background-color: white;
   height: 100px;
   padding: 0 30px;
 }
 
 .head-input {
-  background-color: #887F7F;
+  background-color: #887f7f;
   color: white;
   border-radius: 15px;
   height: 40px;
@@ -53,12 +53,12 @@
 }
 
 .log-button {
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   font-weight: 600;
   background-color: white;
   text-align: center;
   border-radius: 20px;
-  border: 2px solid #887F7F;
+  border: 2px solid #887f7f;
   height: 40px;
   width: 150px;
   margin-left: auto;
@@ -67,7 +67,7 @@
 .nav-bar {
   display: flex;
   justify-content: space-around;
-  background-color: #FEEADB;
+  background-color: #feeadb;
   padding: 10px 0;
 }
 
@@ -96,7 +96,7 @@
   background: transparent;
   border: none;
   color: white;
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   font-size: 16px;
   flex-grow: 1;
   outline: none;
@@ -120,7 +120,7 @@
 }
 
 .tag {
-  background-color: #887F7F;
+  background-color: #887f7f;
   color: white;
   border: none;
   border-radius: 15px; /* เพิ่มความโค้ง */
@@ -152,7 +152,7 @@
 }
 
 .tags-header h2 {
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   font-size: 2.3rem;
   font-weight: 700;
   color: #4a3d3d;
@@ -184,46 +184,46 @@
   border: none;
   font-size: 1rem;
   color: #4a3d3d;
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   margin-left: 10px;
   cursor: pointer;
   border-radius: 10px;
 }
 
-.box{
+.box {
   margin-left: 70px;
   margin-right: 70px;
   margin-top: 50px;
   border-radius: 20px;
-  border: 1px solid #3E3939;
-  background-color: #3E3939;
+  border: 1px solid #3e3939;
+  background-color: #3e3939;
   margin-bottom: 50px;
 }
 
-.mainS-button-container{
+.mainS-button-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding:10px;
+  padding: 10px;
 }
 
-.mainS-button{
+.mainS-button {
   box-shadow: none;
   padding: 1%;
   font-size: 40px;
   border-radius: 20px;
-  background:none;
-  border:none;
-  color:#FFFFFF;
+  background: none;
+  border: none;
+  color: #ffffff;
 }
 
-.mainS-button:hover{
-  background-color: #5B5252;
+.mainS-button:hover {
+  background-color: #5b5252;
 }
 
-.mainS{
+.mainS {
   border-width: 10px;
-  background-color: #5B5252;
+  background-color: #5b5252;
   margin-left: 5%;
   margin-right: 5%;
   display: flex;
@@ -231,8 +231,8 @@
   align-items: center;
 }
 
-.mainS-text{
-  color:#FFFFFF;
+.mainS-text {
+  color: #ffffff;
   font-size: 28px;
   font-weight: bold;
   align-self: flex-start;
@@ -240,10 +240,10 @@
   padding-left: 20px;
 }
 
-.mainS-content-container{
-  color:#FFFFFF;
+.mainS-content-container {
+  color: #ffffff;
   border-radius: 15px;
-  background-color: #887F7F;
+  background-color: #887f7f;
   display: flex;
   width: 80%;
   height: 130px;
@@ -251,22 +251,22 @@
   flex-direction: row;
 }
 
-.mainS-img-content{
+.mainS-img-content {
   width: 20%;
   border-radius: 15px;
 }
 
-.mainS-content{
+.mainS-content {
   width: 80%;
   background-color: #61dafb;
   border-radius: 15px;
 }
 
-.selected-box{
+.selected-box {
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 50px;
-  background-color: #5B5252;
+  background-color: #5b5252;
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -277,12 +277,12 @@
   display: flex;
   justify-content: space-between;
   margin: auto;
-  color: #FFFFFF;
+  color: #ffffff;
   width: 100%;
 }
 
-.Typed-text{
-  color:#FFFFFF;
+.Typed-text {
+  color: #ffffff;
   font-size: 28px;
   font-weight: bold;
   margin: 10px;
@@ -292,8 +292,8 @@
   height: 50px;
 }
 
-.Arrange-text{
-  color:#FFFFFF;
+.Arrange-text {
+  color: #ffffff;
   font-size: 20px;
   font-weight: bold;
   margin: 10px;
@@ -304,11 +304,10 @@
   height: 50px;
 }
 
-
-.selected-content-container{
-  color:#FFFFFF;
+.selected-content-container {
+  color: #ffffff;
   border-radius: 15px;
-  background-color: #887F7F;
+  background-color: #887f7f;
   display: flex;
   width: 80%;
   height: 130px;
@@ -317,7 +316,7 @@
   margin-bottom: 30px;
 }
 
-.selected-like-button-container{
+.selected-like-button-container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -327,7 +326,7 @@
   box-sizing: border-box;
 }
 
-.selected-like-button{
+.selected-like-button {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -335,12 +334,12 @@
 }
 
 body {
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   background-color: #fdd5b8;
 }
 
 .profile-header h2 {
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   font-size: 2.3rem;
   font-weight: 700;
   color: #4a3d3d;
@@ -392,19 +391,19 @@ body {
   font-size: 0.9rem;
 }
 
-.content-box{
+.content-box {
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 50px;
-  background-color: #887F7F;
+  background-color: #887f7f;
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #3E3939;
+  border: 1px solid #3e3939;
   border-radius: 20px;
 }
-  
+
 .profile-right {
   display: flex;
   justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
@@ -433,7 +432,7 @@ body {
   color: white;
   padding: 5px 10px;
   width: 150px; /* ปรับขนาดกรอบ */
-  padding: 5px; 
+  padding: 5px;
   border: 1px solid #ccc; /* กรอบของช่อง */
   border-radius: 18px; /* ทำมุมโค้ง */
 }
@@ -480,7 +479,7 @@ body {
 .edit-image-button {
   position: absolute;
   top: 210px; /* ปรับตำแหน่ง*/
-  left: 960px; 
+  left: 960px;
   padding: 5px 10px;
   font-size: 0.8rem;
   background-color: #4a90e2;
@@ -488,7 +487,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
 }
 
 .edit-image-button:hover {
@@ -537,7 +536,7 @@ input {
   padding: 5px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   font-size: 1.1rem;
   border-radius: 18px; /* ทำมุมโค้ง */
 }
@@ -558,16 +557,19 @@ input {
 }
 
 .save-button {
-  background-color: #3E3939; /* สีพื้นหลังของปุ่ม SAVE */
+  background-color: #3e3939; /* สีพื้นหลังของปุ่ม SAVE */
   color: white;
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   border-radius: 18px; /* ทำมุมโค้ง */
 }
 
 .cancel-button {
   background-color: #fcfbfb; /* สีพื้นหลังของปุ่ม CANCEL */
-  color: #3E3939;
-  font-family: 'Kanit', sans-serif;
+  color: #3e3939;
+  font-family: "Kanit", sans-serif;
   border-radius: 18px; /* ทำมุมโค้ง */
 }
 
+.l {
+  font-size: large;
+}
