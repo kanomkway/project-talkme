@@ -1,5 +1,5 @@
 import './ContentScreen.css';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import {
   Routes,
@@ -7,18 +7,26 @@ import {
   useNavigate,
   NavLink,
   Link,
+  useLocation,
 } from "react-router-dom";
 
 function ContentScreen() {
+
+  const location = useLocation();
+  const {id,title,content} = location.state || {};
+
+  useEffect(()=>{
+
+  },[title])
 
   const [value, setValue] = useState("Type Here!")
 
   return (
     <main className="main-content">
     <div className="post-container">
-      <h3 className="post-title">บริการร้านเกมหน้ามอ</h3>
+      <h3 className="post-title">{title}</h3>
       <p className="post-content">
-        สำหรับใครที่หาเพื่อนเล่นเกม...
+        {content}
       </p>
       <div className="post-footer">
         <button className="like-button">👍 978</button>
