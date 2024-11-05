@@ -109,7 +109,7 @@ function ContentScreen() {
       </div>
       {commentList}
       <div className="comment-input-container">
-        <label htmlFor="comment">Comment :</label>
+        <h3 htmlFor="comment">Comment :</h3>
         <textarea
           id="comment"
           className="comment-input"
