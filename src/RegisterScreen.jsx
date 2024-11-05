@@ -35,14 +35,15 @@ const RegisterScreen = () => {
       const data = responsedata.data;
 
       Swal.fire({
-        title: "เข้าสู่ระบบสำเร็จ!",
+        title: "ลงทะเบียนสำเร็จ!",
         icon: "success",
+        text: data.message,
         confirmButtonColor: "#134e4a",
       });
     } catch (error) {
       console.log("error:", error);
       const errorMessage =
-        error.response?.data || "เกิดข้อผิดพลาดในการเชื่อมต่อ";
+        error.response?.data?.message || "เกิดข้อผิดพลาดในการเชื่อมต่อ";
       Swal.fire({
         title: "ข้อมูลผิดพลาด!",
         text: errorMessage,

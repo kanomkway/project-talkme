@@ -15,8 +15,9 @@ const LoginScreen = () => {
   const apiurl = "http://localhost:5000";
   const [name, setName] = useState("");
   const [pass, setPass] = useState("");
+  const [loginStatus, setLoginStatus] = useState("");
 
-  const InsertDatabase = async () => {
+  const handleLogin = async () => {
     if (!name || !pass) {
       Swal.fire({
         title: "ผิดพลาด!",
@@ -29,24 +30,35 @@ const LoginScreen = () => {
     console.log("Sending:", { username: name, password: pass });
 
     try {
-      const responsedata = await axios.post(apiurl + "/api/adduser", {
-        username: name,
-        password: pass,
-      });
-      const data = responsedata.data;
+      const getdata = await axios.get(apiurl + "/api/user");
+      const users = getdata.data;
+      console.log(users);
+      const user = users.find(
+        (user) => user.username === name && user.password === pass
+      );
 
-      Swal.fire({
-        title: "เข้าสู่ระบบสำเร็จ!",
-        icon: "success",
-        confirmButtonColor: "#134e4a",
-      });
+      if (user) {
+        setLoginStatus("Login successful!");
+        localStorage.setItem("user", JSON.stringify(user));
+        Swal.fire({
+          title: "เข้าสู่ระบบสำเร็จ!",
+          icon: "success",
+          confirmButtonColor: "#134e4a",
+        });
+      } else {
+        setLoginStatus("Username or Password is incorrect.");
+        Swal.fire({
+          title: "ข้อมูลผิดพลาด!",
+          icon: "error",
+          text: "Username or Password is incorrect.",
+          confirmButtonColor: "#134e4a",
+        });
+      }
     } catch (error) {
-      console.log("error:", error);
-      const errorMessage =
-        error.response?.data || "เกิดข้อผิดพลาดในการเชื่อมต่อ";
+      console.error("Error during login:", error);
+      setLoginStatus("An error occurred during login.");
       Swal.fire({
         title: "ข้อมูลผิดพลาด!",
-        text: errorMessage,
         icon: "error",
         confirmButtonColor: "#134e4a",
       });
@@ -92,11 +104,7 @@ const LoginScreen = () => {
         <br />
         <br />
         <br />
-        <button
-          className="save-button l"
-          type="button"
-          onClick={() => InsertDatabase()}
-        >
+        <button className="save-button l" type="button" onClick={handleLogin}>
           OK
         </button>
       </div>
