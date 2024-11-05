@@ -1,0 +1,96 @@
+.profile-header h2 {
+  font-family: "Kanit", sans-serif;
+  font-size: 2.3rem;
+  color: #4a3d3d;
+  text-align: left;
+  margin-left: 200px;
+}
+
+.profile-container {
+  display: flex;
+  padding: 20px;
+}
+
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(100px); /* ขยับไปทางขวา 10 พิกเซล */
+}
+
+.profile-image-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  background-color: #fff; /* สีพื้นหลังกรอบ */
+  margin-left: 250px;
+  margin-top: -10px;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.edit-profile-btn {
+  margin-top: 30px; /* ขยับปุ่ม */
+  margin-left: 250px; /* เพิ่มระยะห่างจากขอบซ้าย */
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.logout-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  margin-top: 10px;
+  margin-left: 250px; /* เพิ่มระยะห่างจากขอบซ้าย */
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.profile-right {
+  display: flex;
+  justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+  align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+  flex: 0.5;
+  display: inline-block; 
+  text-align: left; 
+  margin: 0 auto; /* จัดคอนเทนเนอร์ให้อยู่ตรงกลาง */
+  transform: translateX(100px); /* ขยับไปทางขวา */
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: -50px; /* ขยับขึ้นไปข้างบน */
+}
+
+.user-info-label {
+  width: 100px; /* ปรับขนาด */
+  font-weight: bold;
+}
+
+.user-info-value {
+  background-color: #b0a9a9;
+  color: white;
+  padding: 5px 10px;
+  width: 220px; /* ปรับขนาดกรอบ */
+  padding: 5px;
+  border: 1px solid #ccc; /* กรอบของช่อง */
+  border-radius: 18px; /* ทำมุมโค้ง */
+}

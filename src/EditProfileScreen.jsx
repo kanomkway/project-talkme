@@ -1,4 +1,4 @@
-import './App.css';
+import './EditProfileScreen.css';
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
@@ -7,24 +7,21 @@ function EditProfileScreen() {
 
   return (
     <div className="App">
-        <div className="profile-header">
-            <h2>Profile</h2>
+        <div className="editprofile-header">
+            <h2>EDITPROFILE</h2>
         </div>
+        <button className="edit-image-button">Edit Image</button>
 
-        <div className="profile-edit-container">
-          <button className="edit-image-button">Edit Image</button>
-          <img src="path/to/profile-image.jpg" alt="Profile" class="profile-image" />
+        <div className="editprofile-image">
+        <img
+          src="src/img/flower.png" alt="Profile" className="profileImage" />
+        </div>
+        
         <div className="user-id">ID User : 0000001</div>
-      </div>
-      
         <form className="form-section">    
             <div className="form-group-inline">
               <label>Name User :</label>
               <input type="text" defaultValue="CHATjam" />
-            </div>
-            <div className="form-group-inline">
-              <label>Email :</label>
-              <input type="email" defaultValue="CHATjam@gmail.com" />
             </div>
             <div className="form-group-inline">
               <label>รหัสผ่านเก่า :</label>
