@@ -23,8 +23,9 @@ const SearchPage = () => {
   return (
     <div style={{ marginTop: "50px", marginLeft: "80px" }}>
       <h2>ผลการค้นหาสำหรับ: "{query}"</h2>
-      <div className="post-search">
-        {results.map((item, index) => (
+
+      {results.map((item, index) => (
+        <div className="post-search">
           <div key={index}>
             <h3>
               # {item.id} &nbsp;{item.title}
@@ -32,8 +33,8 @@ const SearchPage = () => {
             <div className="long-tex">เนื้อหา: {item.content}</div>
             <br />
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };
