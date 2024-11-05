@@ -1,15 +1,14 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { GoogleLogin } from "@react-oauth/google";
-import { ImCross } from "react-icons/im";
+import { FaBackward } from "react-icons/fa";
 import Swal from "sweetalert2";
 import axios from "axios";
 
-const LoginScreen = () => {
+const RegisterScreen = () => {
   const navigate = useNavigate();
-  const toRegister = () => {
-    navigate("/register");
+  const toLogin = () => {
+    navigate("/login");
   };
 
   const apiurl = "http://localhost:5000";
@@ -66,13 +65,13 @@ const LoginScreen = () => {
       <div>
         <img
           src="src/img/logo.png"
-          width={220}
+          width={180}
           style={{
-            marginTop: "50px",
-            marginBottom: "30px",
+            marginTop: "40px",
+            marginBottom: "15px",
           }}
         />
-        <br />
+        <h1 style={{ marginBottom: "35px" }}>REGISTER</h1>
       </div>
       <div>
         <h2>USERNAME</h2>
@@ -91,23 +90,21 @@ const LoginScreen = () => {
         ></input>
         <br />
         <br />
-        <br />
         <button
           className="save-button l"
           type="button"
           onClick={() => InsertDatabase()}
         >
-          OK
+          SAVE
         </button>
       </div>
       <div>
-        <br />
-        <h3 style={{ cursor: "pointer" }} onClick={toRegister}>
-          No user? REGISTER HERE
+        <h3 style={{ cursor: "pointer", marginTop: "35px" }} onClick={toLogin}>
+          <FaBackward size={18} /> &nbsp; Back
         </h3>
       </div>
     </div>
   );
 };
 
-export default LoginScreen;
+export default RegisterScreen;
