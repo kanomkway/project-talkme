@@ -53,16 +53,8 @@ function MainScreen() {
     navigate('/music-p');
   }
 
-  const gotoPetTopic=()=>{
-    navigate('/pet-p');
-  }
-
   const gotoFoodTopic=()=>{
     navigate('/food-p');
-  }
-
-  const gotoTravelTopic=()=>{
-    navigate('/travel-p');
   }
 
   const contentList = content.map((item, index) => (
@@ -85,17 +77,11 @@ function MainScreen() {
             <button className="mainS-button" onClick={gotoGeneralTopic}>
               <img src='src/img/ปุ่มหมวดทั่วไป.png'/>
             </button>
-            <button className="mainS-button" onClick={gotoMusicTopic}>
-              <img src='src/img/ปุ่มหมวดเพลง.png'/>
-            </button>
-            <button className="mainS-button" onClick={gotoPetTopic}>
-              <img src='src/img/ปุ่มหมวดสัตว์เลี้ยง.png'/>
-            </button>
             <button className="mainS-button" onClick={gotoFoodTopic}>
               <img src='src/img/ปุ่มหมวดอาหาร.png'/>
             </button>
-            <button className="mainS-button" onClick={gotoTravelTopic}>
-              <img src='src/img/ปุ่มหมวดท่องเที่ยว.png'/>
+            <button className="mainS-button" onClick={gotoMusicTopic}>
+              <img src='src/img/ปุ่มหมวดเพลง.png'/>
             </button>
         </div> 
       </div>

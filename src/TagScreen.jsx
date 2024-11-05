@@ -10,6 +10,12 @@ function TagScreen() {
   const toGeneral = () => {
     navigate("/general-p");
   };
+  const toFood = () => {
+    navigate("/food-p");
+  };
+  const toMusic = () => {
+    navigate("/music-p");
+  };
 
   return (
       <main className="main-content">
@@ -25,18 +31,12 @@ function TagScreen() {
           <button className="tag" onClick={toGeneral}>
           <img src="src/img/ปุ่มหมวดทั่วไป.png" alt="ทั่วไป" width="45px" height="60px" />
           </button>
-          <button className="tag">
-          <img src="src/img/ปุ่มหมวดท่องเที่ยว.png" alt="ท่องเที่ยว" width="45px" height="60px" />
-          </button>
-          <button className="tag">
-          <img src="src/img/ปุ่มหมวดเพลง.png" alt="เพลง" width="45px" height="60px" />
-          </button>
-          <button className="tag">
-          <img src="src/img/ปุ่มหมวดสัตว์เลี้ยง.png" alt="สัตว์เลี้ยง" width="45px" height="60px" />
-          </button>
-          <button className="tag">
+          <button className="tag" onClick={toFood}>
           <img src="src/img/ปุ่มหมวดอาหาร.png" alt="อาหาร" width="45px" height="60px" />
           </button>
+          <button className="tag" onClick={toMusic}>
+          <img src="src/img/ปุ่มหมวดเพลง.png" alt="เพลง" width="45px" height="60px" />
+          </button>         
         </div>
       </main>
   );

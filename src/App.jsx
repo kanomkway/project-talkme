@@ -18,6 +18,8 @@ import MyBoardScreen from "./MyBoardScreen";
 import CreatePostScreen from "./CreatePostScreen";
 import ParticipatedScreen from "./ParticipatedScreen";
 import FollowedBoardScreen from "./FollowedBoardScreen";
+import MusicPage from "./MusicPage";
+import FoodPage from "./FoodPage";
 
 function App() {
   return (
@@ -34,11 +36,9 @@ function App() {
         <Route path="/editProfile" element={<EditProfileScreen />} />
 
         <Route path="/general-p" element={<GeneralPage />} />
-        <Route path="/music-p" element={<PageSelectedScreen />} />
-        <Route path="/pet-p" element={<PageSelectedScreen />} />
-        <Route path="/food-p" element={<PageSelectedScreen />} />
-        <Route path="/travel-p" element={<PageSelectedScreen />} />
-
+        <Route path="/food-p" element={<FoodPage />} />
+        <Route path="/music-p" element={<MusicPage />} />
+        
         <Route path="/my_board" element={<MyBoardScreen />} />
 
         <Route path="/followed_board" element={<FollowedBoardScreen />} />
