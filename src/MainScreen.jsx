@@ -72,10 +72,21 @@ function MainScreen() {
     console.log(con)
   };
 
+  const getImageByTag = (tag) => {
+    if (tag === 'general') {
+      return 'src/img/ปุ่มหมวดทั่วไป.png';
+    } else if (tag === 'food') {
+      return 'src/img/ปุ่มหมวดอาหาร.png';
+    } else if (tag === 'music') {
+      return 'src/img/ปุ่มหมวดเพลง.png';
+    }
+    return ''; // กรณีไม่มี tag ที่ตรงกัน
+  };
+
   const contentList = content?.map((item, index) => (
       <div className="mainS-content-container" key={index} onClick={() => handleNavigate(item)}>
         <div className="mainS-img-content">
-          a 
+          <img src={getImageByTag(item.tag)}/>
           {console.log(item)}
         </div>
         <div className="mainS-content">
