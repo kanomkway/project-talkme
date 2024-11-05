@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import {
   Routes,
@@ -8,10 +8,40 @@ import {
   NavLink,
   Link,
 } from "react-router-dom";
+import axios from 'axios';
+
+function Item(props) {
+  return (
+    <div key={props.id} className="post">
+      <h3>
+        # {props.id} &nbsp;{props.title}
+      </h3>
+      <div className="long-tex">เนื้อหา: {props.content}</div>
+      <br />
+    </div>
+  );
+}
 
 function MainScreen() {
 
   const [value, setValue] = useState("Type Here!")
+  const [content,setContent] = useState([]);
+
+  const URL = "http://localhost:5000";
+  useEffect(()=>{
+    axios
+    .get(URL+'/')
+    .then(response=>{
+      setContent(response.data);
+      console.log(response.data);
+    })
+    .catch(error=>{
+      console.log("error!");
+    })
+    return ()=>{
+
+    }}
+    ,[])
 
   const navigate = useNavigate();
 
@@ -34,6 +64,8 @@ function MainScreen() {
   const gotoTravelTopic=()=>{
     navigate('/travel-p');
   }
+
+  const contentList = content.map((item) => <Item {...item} />);
 
   return (
     <div className="App">
@@ -63,23 +95,7 @@ function MainScreen() {
                 a
             </div>
             <div className="mainS-content">
-                a
-            </div>
-        </div>
-        <div className="mainS-content-container">
-            <div className="mainS-img-content">
-                a
-            </div>
-            <div className="mainS-content">
-                a
-            </div>
-        </div>
-        <div className="mainS-content-container">
-            <div className="mainS-img-content">
-                a
-            </div>
-            <div className="mainS-content">
-                a
+                {contentList}
             </div>
         </div>
       </div>
