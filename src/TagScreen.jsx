@@ -21,24 +21,23 @@ function TagScreen() {
           </div>
           <button className="sort-button">ก - ฮ ▼</button>
         </div>
-
-      <div className="tags">
-        <button className="tag" onClick={toGeneral}>
-        <img src="src/img/ปุ่มหมวดทั่วไป.png" alt="ทั่วไป" width="40px" height="50px" />
-        </button>
-        <button className="tag">
-        <img src="src/img/ปุ่มหมวดท่องเที่ยว.png" alt="ทั่วไป" width="40px" height="50px" />
-        </button>
-        <button className="tag">
-        <img src="src/img/ปุ่มหมวดเพลง.png" alt="ทั่วไป" width="40px" height="50px" />
-        </button>
-        <button className="tag">
-        <img src="src/img/ปุ่มหมวดสัตว์เลี้ยง.png" alt="ทั่วไป" width="40px" height="50px" />
-        </button>
-        <button className="tag">
-        <img src="src/img/ปุ่มหมวดอาหาร.png" alt="ทั่วไป" width="40px" height="50px" />
-        </button>
-      </div>
+        <div className="tags">
+          <button className="tag" onClick={toGeneral}>
+          <img src="src/img/ปุ่มหมวดทั่วไป.png" alt="ทั่วไป" width="45px" height="60px" />
+          </button>
+          <button className="tag">
+          <img src="src/img/ปุ่มหมวดท่องเที่ยว.png" alt="ท่องเที่ยว" width="45px" height="60px" />
+          </button>
+          <button className="tag">
+          <img src="src/img/ปุ่มหมวดเพลง.png" alt="เพลง" width="45px" height="60px" />
+          </button>
+          <button className="tag">
+          <img src="src/img/ปุ่มหมวดสัตว์เลี้ยง.png" alt="สัตว์เลี้ยง" width="45px" height="60px" />
+          </button>
+          <button className="tag">
+          <img src="src/img/ปุ่มหมวดอาหาร.png" alt="อาหาร" width="45px" height="60px" />
+          </button>
+        </div>
       </main>
   );
 }

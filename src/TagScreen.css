@@ -40,19 +40,28 @@
     cursor: pointer;
   }
 
+  .tags {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+
   .tag {
     background-color: #887F7F;
-    color: white;
+    box-shadow: none;
+    padding: 1%;
+    font-size: 2rem;
+    border-radius: 20px;
     border: none;
-    border-radius: 15px; /* เพิ่มความโค้ง */
-    padding: 20px 30px; /* ขยายขนาดกล่อง */
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    font-size: 1.2rem;
     margin-right: 20px;
-    
+  }
+
+  .tag:hover {
+    background-color: #5b5252;
   }
   
   .tag.active {
