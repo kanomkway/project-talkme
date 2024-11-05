@@ -39,11 +39,21 @@ function MainScreen() {
     <div className="App">
       <div className="box">
         <div className="mainS-button-container">
-            <button className="mainS-button" onClick={gotoGeneralTopic}>a</button>
-            <button className="mainS-button" onClick={gotoMusicTopic}>b</button>
-            <button className="mainS-button" onClick={gotoPetTopic}>c</button>
-            <button className="mainS-button" onClick={gotoFoodTopic}>d</button>
-            <button className="mainS-button" onClick={gotoTravelTopic}>e</button>
+            <button className="mainS-button" onClick={gotoGeneralTopic}>
+              <img src='src/img/ปุ่มหมวดทั่วไป.png'/>
+            </button>
+            <button className="mainS-button" onClick={gotoMusicTopic}>
+              <img src='src/img/ปุ่มหมวดเพลง.png'/>
+            </button>
+            <button className="mainS-button" onClick={gotoPetTopic}>
+              <img src='src/img/ปุ่มหมวดสัตว์เลี้ยง.png'/>
+            </button>
+            <button className="mainS-button" onClick={gotoFoodTopic}>
+              <img src='src/img/ปุ่มหมวดอาหาร.png'/>
+            </button>
+            <button className="mainS-button" onClick={gotoTravelTopic}>
+              <img src='src/img/ปุ่มหมวดท่องเที่ยว.png'/>
+            </button>
         </div> 
       </div>
       <div className="mainS">
