@@ -23,7 +23,7 @@ function ContentScreen() {
 
   return (
     <main className="main-content">
-    <div className="post-container">
+    <div className="post-content-container">
       <h3 className="post-title">{title}</h3>
       <p className="post-content">
         {content}

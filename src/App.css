@@ -214,6 +214,7 @@
   border-radius: 20px;
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .mainS-button:hover {
