@@ -20,25 +20,31 @@ function ContentScreen() {
 
   const [comment,setComment] = useState([]);
 
-  const URL = "http://localhost:5000";
   useEffect(()=>{
+    if (!id || !tag) {
+      console.log("Missing id or tag");
+      return;
+    }
     axios
-    .get(URL+'/content')
+      .get(`${apiurl}/content?id=${id}&tag=${tag}`)
     .then(response=>{
       setComment(response.data);
       console.log(response.data);
+      if(!id || !tag || !info){
+        console.log("Sending:", {
+          id: id,
+          tag:tag,
+          info:info
+        });   
+      }
+      
     })
     .catch(error=>{
       console.log("error!");
     })
     return ()=>{
-
     }}
     ,[])
-
-  useEffect(()=>{
-
-  },[title])
 
   const [info,setInfo] = useState("")
 
