@@ -19,7 +19,7 @@ function Item(props) {
 function MusicPage() {
   const [value, setValue] = useState("Type Here!");
   const [content, setContent] = useState([]);
-  const [sortOrder, setSortOrder] = useState('recent');
+  const [sortOrder, setSortOrder] = useState("recent");
 
   const navigate = useNavigate();
 
@@ -37,27 +37,27 @@ function MusicPage() {
       });
   }, []);
 
-  const handleNavigate=(item)=>{
+  const handleNavigate = (item) => {
     if (!item) {
       console.error("Item is undefined");
       return;
     }
-    const con={
+    const con = {
       id: item.id,
       title: item.title,
-      cont:item.content,
-      tag:item.tag
-    }
-    navigate('/content',{state:con});
-    console.log(con)
+      cont: item.content,
+      tag: item.tag,
+    };
+    navigate("/content", { state: con });
+    console.log(con);
   };
 
   const handleSortChange = (event) => {
     setSortOrder(event.target.value);
   };
-  
+
   const sortedContent = content?.sort((a, b) => {
-    if (sortOrder === 'recent') {
+    if (sortOrder === "recent") {
       return new Date(b.date) - new Date(a.date);
     } else {
       return new Date(a.date) - new Date(b.date);
@@ -67,13 +67,22 @@ function MusicPage() {
   const contentList = sortedContent?.map((item, index) => (
     <div className="post" key={index} onClick={() => handleNavigate(item)}>
       <div className="mainS-content">
-      <h2>
-        #{item.id} &nbsp;{item.title}
-      </h2>
+        <h2>
+          #{item.id} &nbsp;{item.title}
+        </h2>
         {item.content}
+        <div
+          style={{
+            marginLeft: "1580px",
+            textAlign: "right",
+            marginTop: "10px",
+          }}
+        >
+          {item.username}
+        </div>
       </div>
     </div>
-));
+  ));
   return (
     <main className="main-content">
       <div className="tag-header">
