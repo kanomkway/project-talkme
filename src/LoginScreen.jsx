@@ -44,6 +44,8 @@ const LoginScreen = () => {
           title: "เข้าสู่ระบบสำเร็จ!",
           icon: "success",
           confirmButtonColor: "#134e4a",
+        }).then(() => {
+          navigate("/profile");
         });
       } else {
         setLoginStatus("Username or Password is incorrect.");

@@ -16,6 +16,10 @@ const Navbar = () => {
   const userID = localStorage.getItem("id");
   const [value, setValue] = useState("");
 
+  const userData = localStorage.getItem("user");
+  const user = userData ? JSON.parse(userData) : {}; // แปลง JSON เป็น object
+  const username = user.username || "";
+
   const navbarItems = [
     {
       path: "/profile",
@@ -37,11 +41,11 @@ const Navbar = () => {
     //   label: "Participate Board",
     //   icon: <BsFillClipboard2PulseFill size={24} />,
     // },
-    {
-      path: "/followed_board",
-      label: "Followed Board",
-      icon: <BsFillClipboard2HeartFill size={24} />,
-    },
+    // {
+    //   path: "/followed_board",
+    //   label: "Followed Board",
+    //   icon: <BsFillClipboard2HeartFill size={24} />,
+    // },
   ];
 
   const [isNavbarCollapsed, setNavbarCollapsed] = useState(false);
@@ -101,9 +105,14 @@ const Navbar = () => {
           />
           <FaSearch onClick={handleSearch} className="search-icon" />
         </div>
-        <a href="/login">
-          <button className="log-button pointer">เข้าสู่ระบบ / Log In</button>
-        </a>
+
+        {username ? (
+          <span className="username">{username}</span>
+        ) : (
+          <a href="/login">
+            <button className="log-button pointer">เข้าสู่ระบบ / Log In</button>
+          </a>
+        )}
       </div>
 
       <nav className="navbar">
