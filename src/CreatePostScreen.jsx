@@ -95,9 +95,8 @@ function CreatePostScreen() {
             <select
               className="dropdown-select"
               style={{ width: "120px" }}
-              value={category}
               onChange={(e) => {
-                setCategory("tag_" + e.target.value);
+                setCategory(e.target.value);
               }}
             >
               <option value="">---</option>
