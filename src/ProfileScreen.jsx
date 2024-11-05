@@ -2,14 +2,32 @@ import "./ProfileScreen.css";
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function ProfileScreen() {
   const [value, setValue] = useState("Type Here!");
+  const userData = localStorage.getItem("user");
+  const user = JSON.parse(userData); // แปลง JSON เป็น object
+  const username = user.username;
+  const password = user.password;
+  console.log("Username: " + username + ", Password: " + password);
 
   const navigate = useNavigate();
 
-  const EditProfile = () => {
+  const toEditProfile = () => {
     navigate("/editProfile");
+  };
+
+  const logout = () => {
+    localStorage.setItem("user", JSON.stringify({}));
+    console.log("Log out success.");
+    Swal.fire({
+      title: "ออกจากระบบสำเร็จ!",
+      icon: "success",
+      confirmButtonColor: "#134e4a",
+    }).then(() => {
+      navigate("/login");
+    });
   };
 
   return (
@@ -26,18 +44,18 @@ function ProfileScreen() {
               className="profile-image"
             />
           </div>
-          <button className="edit-profile-btn" onClick={EditProfile}>
+          <button className="edit-profile-btn" onClick={toEditProfile}>
             EDIT PROFILE <i className="icon-edit"></i>
           </button>
-          <button className="logout-btn">LOG OUT</button>
+          <button className="logout-btn" onClick={logout}>
+            LOG OUT
+          </button>
         </div>
 
         <div className="profile-right">
           <div className="user-info">
-            <div className="user-info-label">Name User :</div>
-            <div className="user-info-value">CHATjam</div>
-            <div className="user-info-label">ID User :</div>
-            <div className="user-info-value">0000001</div>
+            <h1>Username :</h1>
+            <div className="user-info-value">{username}</div>
           </div>
         </div>
       </div>

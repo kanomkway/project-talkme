@@ -25,8 +25,8 @@
   border-radius: 50%;
   overflow: hidden;
   display: flex;
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
   background-color: #fff; /* สีพื้นหลังกรอบ */
   margin-left: 250px;
   margin-top: -10px;
@@ -67,8 +67,8 @@
   justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
   align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
   flex: 0.5;
-  display: inline-block; 
-  text-align: left; 
+  display: inline-block;
+  text-align: left;
   margin: 0 auto; /* จัดคอนเทนเนอร์ให้อยู่ตรงกลาง */
   transform: translateX(100px); /* ขยับไปทางขวา */
 }
@@ -92,5 +92,6 @@
   width: 220px; /* ปรับขนาดกรอบ */
   padding: 5px;
   border: 1px solid #ccc; /* กรอบของช่อง */
-  border-radius: 18px; /* ทำมุมโค้ง */
+  border-radius: 30px; /* ทำมุมโค้ง */
+  font-size: 25px;
 }
