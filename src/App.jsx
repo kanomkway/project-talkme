@@ -20,6 +20,7 @@ import ParticipatedScreen from "./ParticipatedScreen";
 import FollowedBoardScreen from "./FollowedBoardScreen";
 import MusicPage from "./MusicPage";
 import FoodPage from "./FoodPage";
+import ContentScreen from "./ContentScreen";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/register" element={<RegisterScreen />} />
         <Route path="/tags" element={<TagScreen />} />
         <Route path="/participate_board" element={<ParticipatedScreen />} />
+        <Route path="/content" element={<ContentScreen/>}/>
 
         <Route path="/editProfile" element={<EditProfileScreen />} />
 

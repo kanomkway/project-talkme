@@ -57,8 +57,22 @@ function MainScreen() {
     navigate('/food-p');
   }
 
-  const contentList = content.map((item, index) => (
-      <div className="mainS-content-container" key={index}>
+  const handleNavigate=(item)=>{
+    if (!item) {
+      console.error("Item is undefined");
+      return;
+    }
+    const con={
+      id: item.id,
+      title: item.title,
+      content: item.content
+    }
+    navigate('/content',{state:con});
+    console.log(con)
+  };
+
+  const contentList = content?.map((item, index) => (
+      <div className="mainS-content-container" key={index} onClick={() => handleNavigate(item)}>
         <div className="mainS-img-content">
           a
         </div>
